@@ -24,6 +24,6 @@ CREATE TABLE project_metadata (
     title VARCHAR(100) NOT NULL DEFAULT 'My Project',
     project_description VARCHAR(500),
     project_status VARCHAR(10) NOT NULL DEFAULT 'Inactive',
-    created_at TIMES--TAMP CURRENT_TIMESTAMP,
-    last_updated TIMESTAMP CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
