@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "DuckDB",
+            "name": "BurgundaryDB",
+            "database": "create_database.sql"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
