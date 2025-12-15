@@ -5,6 +5,13 @@
             "driver": "DuckDB",
             "name": "BurgundaryDB",
             "database": "create_database.sql"
+        },
+        {
+            "name": "BurgundaryDB",
+            "accessMode": "Read/Write",
+            "previewLimit": 50,
+            "driver": "DuckDB",
+            "databaseFilePath": "E:/Databases/Burgundary-Database V1/postgres/BurgundaryDB.db"
         }
     ],
     "sqltools.useNodeRuntime": true
