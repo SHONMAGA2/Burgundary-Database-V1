@@ -1,6 +1,6 @@
 -- Users table
 CREATE TABLE users (
-    user_id BIGINT PRIMARY KEY AUTOINCREMENT,
+    user_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password_hash VARCHAR(200) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE users (
 
 -- Payments table
 CREATE TABLE payments (
-    payment_id BIGINT PRIMARY KEY AUTOINCREMENT,
+    payment_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_id BIGINT REFERENCES users(user_id),
     amount DOUBLE NOT NULL DEFAULT 0,
     currency VARCHAR(10) NOT NULL DEFAULT 'ZAR',
@@ -19,7 +19,7 @@ CREATE TABLE payments (
 
 -- Project metadata table
 CREATE TABLE project_metadata (
-    project_id BIGINT PRIMARY KEY AUTOINCREMENT,
+    project_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_id BIGINT REFERENCES users(user_id),
     title VARCHAR(100) NOT NULL DEFAULT 'My Project',
     project_description VARCHAR(500),
@@ -27,4 +27,3 @@ CREATE TABLE project_metadata (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
